@@ -125,116 +125,46 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CWSServiceInformation\CWSServiceInformation.wsdl" />
-    <None Include="Service References\CWSServiceInformation\schemas7.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas71.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas72.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas73.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas74.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas75.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSServiceInformation\schemas76.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\CwsDataServicesBilling1.wsdl" />
-    <None Include="Service References\CWSTransactionManagement\CwsTransactionManagement.wsdl" />
-    <None Include="Service References\CWSTransactionManagement\CWSTransactionManagement1.wsdl" />
-    <None Include="Service References\CWSTransactionManagement\schemas16.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas161.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1610.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1611.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1612.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1613.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1614.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas1615.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas162.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas163.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas164.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas165.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas166.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas167.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas168.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\schemas169.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\CwsTransactionProcessing.wsdl" />
-    <None Include="Service References\CwsTransactionProcessing\schemas12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas121.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas1210.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas1211.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas122.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas123.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas124.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas125.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas126.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas127.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas128.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CwsTransactionProcessing\schemas129.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Service References\CWSServiceInformation\Arrays.xsd" />
+    <None Include="Service References\CWSServiceInformation\External.xsd" />
+    <None Include="Service References\CWSServiceInformation\Faults.xsd" />
+    <None Include="Service References\CWSServiceInformation\Ipc.General.WCF.Contracts.Common.xsd" />
+    <None Include="Service References\CWSServiceInformation\service.xsd" />
+    <None Include="Service References\CWSServiceInformation\service1.xsd" />
+    <None Include="Service References\CWSServiceInformation\ServiceInformation.wsdl" />
+    <None Include="Service References\CWSServiceInformation\ServiceInformation.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Arrays.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Bankcard.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Billing.wsdl" />
+    <None Include="Service References\CWSTransactionManagement\Billing.xsd" />
+    <None Include="Service References\CWSTransactionManagement\DataServices16.xsd" />
+    <None Include="Service References\CWSTransactionManagement\DataServices2.wsdl" />
+    <None Include="Service References\CWSTransactionManagement\ElectronicChecking.xsd" />
+    <None Include="Service References\CWSTransactionManagement\External.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Fault.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Faults.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Ipc.General.WCF.Contracts.Common.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Pro.xsd" />
+    <None Include="Service References\CWSTransactionManagement\service.xsd" />
+    <None Include="Service References\CWSTransactionManagement\service1.xsd" />
+    <None Include="Service References\CWSTransactionManagement\ServiceInformation.xsd" />
+    <None Include="Service References\CWSTransactionManagement\StoredValue.xsd" />
+    <None Include="Service References\CWSTransactionManagement\TMS.wsdl" />
+    <None Include="Service References\CWSTransactionManagement\TMS.xsd" />
+    <None Include="Service References\CWSTransactionManagement\Transactions.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Arrays.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Bankcard.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\ElectronicChecking.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\External.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Faults.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Ipc.General.WCF.Contracts.Common.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Pro.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\service.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\service1.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\StoredValue.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\TransactionProcessing.wsdl" />
+    <None Include="Service References\CwsTransactionProcessing\TransactionProcessing.xsd" />
+    <None Include="Service References\CwsTransactionProcessing\Transactions.xsd" />
     <None Include="WSDL%27s\CwsDataServices.wsdl" />
     <None Include="WSDL%27s\CwsDataServicesBilling.wsdl" />
     <None Include="WSDL%27s\CwsServiceInformation.wsdl" />
@@ -352,9 +282,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CWSTransactionManagement\SampleCode.CWSTransactionManagement.PingResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\CWSTransactionManagement\SampleCode.CWSTransactionManagement.QueryResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CWSTransactionManagement\SampleCode.CWSTransactionManagement.SummaryDetail.datasource">
