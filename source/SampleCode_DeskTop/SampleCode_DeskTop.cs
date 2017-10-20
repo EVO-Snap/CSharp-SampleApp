@@ -43,7 +43,7 @@ using CardData = SampleCode.CwsTransactionProcessing.CardData;
 using CommercialCardResponse = SampleCode.CwsTransactionProcessing.CommercialCardResponse;
 using IndustryType = SampleCode.CWSServiceInformation.IndustryType;
 using LineItemDetail = SampleCode.CwsTransactionProcessing.LineItemDetail;
-using TypeISOCountryCodeA3 = SampleCode.CwsTransactionProcessing.TypeISOCountryCodeA3;
+//using TypeISOCountryCodeA3 = SampleCode.CwsTransactionProcessing.TypeISOCountryCodeA3;
 
 #region GENERATING the Proxy with svcUtil.exe
 /* Generating the proxy using svcutil.exe
@@ -51,8 +51,8 @@ using TypeISOCountryCodeA3 = SampleCode.CwsTransactionProcessing.TypeISOCountryC
      * Note:  the use of lists,  and merge switch below. 
      * Note: To contain all of the wsdl and xsd files I created a child folder "CWSSOAP".
      * svcutil.exe CWSSOAP/CwsServiceInformation.wsdl /namespace:*,schemas.evosnap.com.Ipc.General.WCF.Contracts.Common.External.SvcInfo /ct:System.Collections.Generic.List`1 /config:app.config /mergeConfig
-     * svcutil.exe https://api.cipcert.goevo.com/2.0.20/Txn?wsdl /namespace:*,schemas.evosnap.com.Ipc.General.WCF.Contracts.Common.External.Txn  /ct:System.Collections.Generic.List`1 /config:app.config /mergeConfig
-     * svcutil.exe https://api.cipcert.goevo.com/2.0.20/DataServices?wsdl /namespace:*,schemas.evosnap.com.Ipc.General.WCF.Contracts.Common.External.DataServices  /ct:System.Collections.Generic.List`1 /config:app.config /mergeConfig
+     * svcutil.exe https://api.cipcert.goevo.com/2.1.28/Txn?wsdl /namespace:*,schemas.evosnap.com.Ipc.General.WCF.Contracts.Common.External.Txn  /ct:System.Collections.Generic.List`1 /config:app.config /mergeConfig
+     * svcutil.exe https://api.cipcert.goevo.com/2.1.28/DataServices?wsdl /namespace:*,schemas.evosnap.com.Ipc.General.WCF.Contracts.Common.External.DataServices  /ct:System.Collections.Generic.List`1 /config:app.config /mergeConfig
      * 
      * Note : for VB.NET customers you should add the switch /language:VB to command lines above
      * 
@@ -794,7 +794,7 @@ namespace SampleCode
                         foreach (ResponseDetails _RD in txnsToProcess)
                         {
                             BCRDifferenceData.TransactionId = _RD.Response.TransactionId;
-                            BCRDifferenceData.TransactionCode = TransactionCode.NotSet;
+                            BCRDifferenceData.TransactionCode = TransactionCode1.NotSet;
                             BCRDifferenceData.Amount = (Result == DialogResult.Yes ? 0.00M : Convert.ToDecimal(TxtAmount.Text) );
                             processResponse(Helper.ProcessBCPTransaction(TransactionType.ReturnById, null, null, null, BCRDifferenceData, null, null, null, null, ChkAcknowledge.Checked, false, ChkForceCloseBatch.Checked));
                         }
@@ -1200,7 +1200,7 @@ namespace SampleCode
                     //Since we used a generic method to set the bankcard data let's clear out the card data and use the token, card type and masked pan returned from
                     //the Authorize above.
                     //NOTE : For tokenization you'll need to store at a minimum the token, cardtype and MaskedPAN. It's also recommended to store the expiration date
-                    BCtransaction.TenderData.CardData = new CardData();
+                    BCtransaction.TenderData.CardData = new CardData1();
                     BCtransaction.TenderData.PaymentAccountDataToken = BCR.PaymentAccountDataToken;
                     BCtransaction.TenderData.CardData.CardType = BCR.CardType;
                     BCtransaction.TenderData.CardData.Expire = "1213"; // Note : that in a swipe track data the format is "YYMM" however here it's "MMYY"
@@ -1791,7 +1791,7 @@ namespace SampleCode
             }
             else
             {
-                List<string> MerchantProfileIds = Helper.Cwssic.GetMerchantProfileIds(Helper.SessionToken, Helper.ServiceID, TenderType.Credit);
+                List<string> MerchantProfileIds = Helper.Cwssic.GetMerchantProfileIds(Helper.SessionToken, Helper.ServiceID, SampleCode.CWSServiceInformation.TenderType.Credit);
 
                 if (MerchantProfileIds != null)
                 {
@@ -2636,7 +2636,7 @@ namespace SampleCode
                 usAVSData.City = TxtAVSUSCity.Text;
                 usAVSData.StateProvince = TxtAVSUSState.Text;
                 usAVSData.PostalCode = TxtAVSUSPostal.Text;
-                usAVSData.Country = (TypeISOCountryCodeA3)CboAVUSCountry.SelectedItem;
+                usAVSData.Country = "USA";
                 dg.AVSData = usAVSData;
                 dg.ProcessInternationalAVS = false;
                 
@@ -2653,7 +2653,7 @@ namespace SampleCode
                 intAVSData.City = TxtAVSIntlCity.Text;
                 intAVSData.StateProvince = TxtAVSIntlState.Text;
                 intAVSData.PostalCode = TxtAVSIntlPostal.Text;
-                intAVSData.Country = (TypeISOCountryCodeA3)CboAVSIntlCountry.SelectedItem;
+                intAVSData.Country = "USA";
                 dg.IntlAVSData = intAVSData;
                 dg.ProcessInternationalAVS = true;
                 InternationalAVSOverride intAvsOverride = new InternationalAVSOverride();
@@ -2981,7 +2981,7 @@ namespace SampleCode
                 usAVSData.City = TxtAVSUSCity.Text;
                 usAVSData.StateProvince = TxtAVSUSState.Text;
                 usAVSData.PostalCode = TxtAVSUSPostal.Text;
-                usAVSData.Country = (TypeISOCountryCodeA3) CboAVUSCountry.SelectedItem;
+                usAVSData.Country = "USA";
                 dg.AVSData = usAVSData;
                 dg.ProcessInternationalAVS = false;
             }
@@ -2997,7 +2997,7 @@ namespace SampleCode
                 intAVSData.City = TxtAVSIntlCity.Text;
                 intAVSData.StateProvince = TxtAVSIntlState.Text;
                 intAVSData.PostalCode = TxtAVSIntlPostal.Text;
-                intAVSData.Country = (TypeISOCountryCodeA3)CboAVSIntlCountry.SelectedItem;
+                intAVSData.Country = "USA";
                 dg.IntlAVSData = intAVSData;
                 dg.ProcessInternationalAVS = true;
                 InternationalAVSOverride intAvsOverride = new InternationalAVSOverride();
